@@ -25,6 +25,8 @@ def error_symbols(arg):
 
 
 for line in txt:
+    line = line.strip()
+    print(line)
     line = line.split("|")
     has_empty_elements = False
     for elem in line:
@@ -48,25 +50,25 @@ for line in txt:
     mail = re.search(mail_pattern, mail)
 
     if name is not None:
-        print(name.group(0))
+        print(name.group(0), end="|")
     else:
-        print("Invalid name")
+        print("Invalid name", end="|")
 
     if age is not None:
-        print(age.group(0))
+        print(age.group(0), end="|")
     else:
-        print("Invalid age")
+        print("Invalid age", end="|")
 
     if tel is not None:
-        print(tel.group(0))
+        print(tel.group(0), end="|")
     else:
-        print("Invalid tel")
+        print("Invalid tel", end="|")
 
     if mail is not None:
         print(mail.group(0))
     else:
         print("Invalid mail")
-
+    print()
 
 
 
