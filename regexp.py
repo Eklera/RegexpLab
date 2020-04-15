@@ -47,7 +47,6 @@ for line in txt:
     tel = re.search(tel_pattern, tel)
     mail = re.search(mail_pattern, mail)
 
-    print(line)
     if name is not None:
         print(name.group(0))
     else:
@@ -67,8 +66,6 @@ for line in txt:
         print(mail.group(0))
     else:
         print("Invalid mail")
-
-
 
 
 
