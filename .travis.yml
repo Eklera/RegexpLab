@@ -11,7 +11,7 @@ addons:
   sonarcloud:
     organization: "eklera"
 script:
-  - coverage run -m main
+  - coverage run -m regexp
 after_success:
   - sonar-scanner
   - coveralls
