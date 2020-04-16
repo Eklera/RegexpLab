@@ -11,6 +11,8 @@ if not txt:
     print("File is empty")
     exit()
 
+assert txt != ""
+
 name_pattern = re.compile(r"^([А-Я][а-я]*){2,3}")
 age_pattern = re.compile(r"\d+")
 tel_pattern = re.compile(r"\+{0,1}\d{11}")
@@ -53,22 +55,28 @@ for line in txt:
         print(name.group(0), end="|")
     else:
         print("Invalid name", end="|")
+    assert name != " "
 
     if age is not None:
         print(age.group(0), end="|")
     else:
         print("Invalid age", end="|")
+    assert age != " "
 
     if tel is not None:
         print(tel.group(0), end="|")
     else:
         print("Invalid tel", end="|")
+    assert tel != " "
 
     if mail is not None:
         print(mail.group(0))
     else:
         print("Invalid mail")
     print()
+    assert mail != " "
+
+
 
 
 
